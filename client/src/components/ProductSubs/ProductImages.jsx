@@ -7,12 +7,21 @@ import ExpandedImage from './ExpandedImage.jsx';
 
 const Wrapper = styled.div`
   position: relative;
-  flex-basis: 65%;
-  width: 50vw;
-  height: 70vh;
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  height: 70vh;
+  flex-direction: column;
   border: 2px solid #aeaeae;
+
+  @media (min-width: 844px) {
+    position: relative;
+    flex-basis: 65%;
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #aeaeae;
+  }
 `;
 
 const RightArrow = styled.div`
@@ -136,6 +145,8 @@ class ProductImages extends React.Component {
 
         {this.state.index !== 0 && <LeftArrow onClick={this.clickNavHandler}><FontAwesome id="-1" name="angle-left" size="2x" /></LeftArrow> }
 
+        <Image onClick={this.toggleModal} src={this.props.images[this.state.index].url} key={this.props.id} alt="style photograph" />
+
         <ViewerThumbnails
           viewerIndex={this.state.index}
           start={this.state.start}
@@ -146,8 +157,6 @@ class ProductImages extends React.Component {
           id={this.props.id}
           alt=""
         />
-
-        <Image onClick={this.toggleModal} src={this.props.images[this.state.index].url} key={this.props.id} alt="style photograph" />
 
         {this.state.isModalOpen && (
           <ModalBackground onMouseDown={this.toggleModal}>

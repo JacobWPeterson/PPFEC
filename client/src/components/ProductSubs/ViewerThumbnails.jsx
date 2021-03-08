@@ -3,18 +3,24 @@ import styled from 'styled-components';
 import FontAwesome from 'react-fontawesome';
 
 const Thumbs = styled.div`
-  z-index: 1;
-  position: absolute;
-  left: 1vw;
-  top: .75vh;
-  width: 6vw;
-  height: auto;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  overflow-y: scroll;
-  margin: 0;
+  flex-direction: row;
+
+  @media (min-width: 844px) {
+    z-index: 1;
+    position: absolute;
+    left: 1vw;
+    top: .75vh;
+    width: 6vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    margin: 0;
+  }
 `;
 
 const ImageContainer = styled.div`
