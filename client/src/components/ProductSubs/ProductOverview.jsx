@@ -5,12 +5,21 @@ import Styles from './StylesComponent.jsx';
 import Selectors from './Selectors.jsx';
 
 const Wrapper = styled.div`
-  flex-basis 35%;
+  width: 98%;
   display: flex;
-  margin-top: 2vh;
+  margin-top: 1vh;
   flex-direction: column;
   justify-content: space-between;
   margin: 3.5vh 0 3.5vh 2vw;
+
+  @media (min-width: 844px) {
+    flex-basis 35%;
+    display: flex;
+    margin-top: 2vh;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 3.5vh 0 3.5vh 2vw;
+  }
 `;
 
 const RatingWrapper = styled.div`

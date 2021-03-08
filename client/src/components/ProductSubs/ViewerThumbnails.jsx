@@ -6,6 +6,9 @@ const Thumbs = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
 
   @media (min-width: 844px) {
     z-index: 1;
@@ -61,15 +64,25 @@ const Image = styled.img`
 `;
 
 const UpArrow = styled.div`
-  color: #e0e0e0;
+  transform: rotate(270deg);
+  color: #424242;
   font-size: 1rem;
   z-index: 1;
-  top: 1vh;
   position: relative;
-  &:hover {
-    color: #80ccc4;
-    transform: scale(1.1);
   };
+
+  @media (min-width: 844px) {
+    transform: rotate(0deg);
+    color: #e0e0e0;
+    font-size: 1rem;
+    z-index: 1;
+    top: 1vh;
+    position: relative;
+    &:hover {
+      color: #80ccc4;
+      transform: scale(1.1);
+    };
+  }
 `;
 
 const NoArrow = styled.div`
@@ -81,15 +94,25 @@ const NoArrow = styled.div`
 `;
 
 const DownArrow = styled.div`
-  color: #e0e0e0;
+  transform: rotate(270deg);
+  color: #424242;
   font-size: 1rem;
   z-index: 1;
-  bottom: 1vh;
   position: relative;
-  &:hover {
-    color: #80ccc4;
-    transform: scale(1.1);
   };
+
+  @media (min-width: 844px) {
+    transform: rotate(0deg);
+    color: #e0e0e0;
+    font-size: 1rem;
+    z-index: 1;
+    bottom: 1vh;
+    position: relative;
+    &:hover {
+      color: #80ccc4;
+      transform: scale(1.1);
+    };
+  }
 `;
 
 class ViewerThumbnails extends React.Component {

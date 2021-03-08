@@ -8,6 +8,10 @@ import FeaturesList from './ProductSubs/FeaturesList.jsx';
 
 const Wrapper = styled.div`
   width: 99vw;
+  margin: auto;
+  display: flex;
+  font-family: 'Lato', sans-serif;
+  flex-direction: column;
 
   @media (min-width: 844px) {
     width: 75vw;
@@ -19,8 +23,11 @@ const Wrapper = styled.div`
 `;
 
 const TopWrapper = styled.div`
-  width: 95%;
+  width: 95vw;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 0;
 
   @media (min-width: 844px) {
     width: 75vw;
@@ -36,7 +43,9 @@ const TopWrapper = styled.div`
 `;
 
 const BottomWrapper = styled.div`
-  width: 95%;
+  width: 95vw;
+  margin: auto;
+  display: flex;
   flex-direction: column;
 
   @media (min-width: 844px) {

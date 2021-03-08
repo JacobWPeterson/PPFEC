@@ -9,55 +9,92 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
   display: flex;
-  height: 70vh;
+  height: 50vh;
+  min-height: 50vh;
+  max-height: 50vh;
   flex-direction: column;
-  border: 2px solid #aeaeae;
+  padding-bottom: 7vh;
 
   @media (min-width: 844px) {
     position: relative;
     flex-basis: 65%;
     width: 50vw;
+    min-height: 70vh;
+    max-height: 70vh;
     height: 70vh;
     display: flex;
     flex-direction: row;
     border: 2px solid #aeaeae;
+    padding-bottom: 0;
   }
 `;
 
 const RightArrow = styled.div`
   color: #e0e0e0;
-  font-size: 1.75rem;
+  font-size: 1rem;
   z-index: 1;
   position: absolute;
-  top: 30vh;
+  top: 24vh;
   right: .25vw;
   &:hover {
     color: #80ccc4;
     transform: scale(1.1);
   };
+
+  @media (min-width: 844px) {
+    color: #e0e0e0;
+    font-size: 1.75rem;
+    z-index: 1;
+    position: absolute;
+    top: 30vh;
+    right: .25vw;
+    &:hover {
+      color: #80ccc4;
+      transform: scale(1.1);
+    };
+  }
 `;
 
 const LeftArrow = styled.div`
   color: #e0e0e0;
-  font-size: 1.75rem;
+  font-size: 1rem;
   z-index: 1;
   position: absolute;
-  top: 30vh;
-  left: git.25vw;
+  top: 24vh;
+  left: .25vw;
   &:hover {
     color: #80ccc4;
     transform: scale(1.1);
   };
+
+  @media (min-width: 844px) {
+    color: #e0e0e0;
+    font-size: 1.75rem;
+    z-index: 1;
+    position: absolute;
+    top: 30vh;
+    left: git.25vw;
+    &:hover {
+      color: #80ccc4;
+      transform: scale(1.1);
+    };
+  }
 `;
 
 const Image = styled.img`
-  width: 100%;
+  width: auto;
   height: 100%;
   object-fit: cover;
-  padding: 0;
-  position: relative;
-  z-index: 0;
-  &:hover { cursor: crosshair; };
+
+  @media (min-width: 844px) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
+    position: relative;
+    z-index: 0;
+    &:hover { cursor: crosshair; };
+  }
 `;
 
 const ModalBackground = styled.div`
